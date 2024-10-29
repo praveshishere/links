@@ -1,0 +1,496 @@
++++ dirname scripts/sessionx.sh
+++ cd scripts
+++ pwd
++ CURRENT_DIR=/Users/pkunwar/.config/tmux/plugins/tmux-sessionx/scripts
+++ tmux display-message -p '#S'
++ CURRENT=0
++ Z_MODE=off
++ source /Users/pkunwar/.config/tmux/plugins/tmux-sessionx/scripts/tmuxinator.sh
++ source /Users/pkunwar/.config/tmux/plugins/tmux-sessionx/scripts/fzf-marks.sh
++ run_plugin
++ preview_settings
+++ tmux_option_or_fallback @sessionx-window-mode off
+++ local option_value
++++ tmux show-option -gqv @sessionx-window-mode
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=off
+++ echo off
++ default_window_mode=off
++ [[ off == \o\n ]]
+++ tmux_option_or_fallback @sessionx-tree-mode off
+++ local option_value
++++ tmux show-option -gqv @sessionx-tree-mode
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=off
+++ echo off
++ default_window_mode=off
++ [[ off == \o\n ]]
+++ tmux_option_or_fallback @sessionx-preview-location top
+++ local option_value
++++ tmux show-option -gqv @sessionx-preview-location
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=top
+++ echo top
++ preview_location=top
+++ tmux_option_or_fallback @sessionx-preview-ratio 75%
+++ local option_value
++++ tmux show-option -gqv @sessionx-preview-ratio
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=75%
+++ echo 75%
++ preview_ratio=75%
+++ tmux_option_or_fallback @sessionx-preview-enabled true
+++ local option_value
++++ tmux show-option -gqv @sessionx-preview-enabled
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=true
+++ echo true
++ preview_enabled=true
++ window_settings
+++ tmux_option_or_fallback @sessionx-window-height 75%
+++ local option_value
++++ tmux show-option -gqv @sessionx-window-height
+++ option_value=85%
+++ '[' -z 85% ']'
+++ echo 85%
++ window_height=85%
+++ tmux_option_or_fallback @sessionx-window-width 75%
+++ local option_value
++++ tmux show-option -gqv @sessionx-window-width
+++ option_value=75%
+++ '[' -z 75% ']'
+++ echo 75%
++ window_width=75%
+++ tmux_option_or_fallback @sessionx-layout default
+++ local option_value
++++ tmux show-option -gqv @sessionx-layout
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=default
+++ echo default
++ layout_mode=default
+++ tmux_option_or_fallback @sessionx-prompt 'î¯ '
+++ local option_value
++++ tmux show-option -gqv @sessionx-prompt
+++ option_value=
+++ '[' -z '' ']'
+++ option_value='î¯ '
+++ echo 'î¯ '
++ prompt_icon='î¯ '
+++ tmux_option_or_fallback @sessionx-pointer $'â\226¶'
+++ local option_value
++++ tmux show-option -gqv @sessionx-pointer
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=$'â\226¶'
+++ echo $'â\226¶'
++ pointer_icon=$'â\226¶'
++ handle_binds
+++ tmux_option_or_fallback @sessionx-bind-tree-mode ctrl-t
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-tree-mode
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-t
+++ echo ctrl-t
++ bind_tree_mode=ctrl-t
+++ tmux_option_or_fallback @sessionx-bind-window-mode ctrl-w
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-window-mode
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-w
+++ echo ctrl-w
++ bind_window_mode=ctrl-w
+++ tmux_option_or_fallback @sessionx-bind-configuration-path ctrl-x
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-configuration-path
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-x
+++ echo ctrl-x
++ bind_configuration_mode=ctrl-x
+++ tmux_option_or_fallback @sessionx-bind-rename-session ctrl-r
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-rename-session
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-r
+++ echo ctrl-r
++ bind_rename_session=ctrl-r
+++ tmux_option_or_fallback @sessionx-additional-options '--color pointer:9,spinner:92,marker:46'
+++ local option_value
++++ tmux show-option -gqv @sessionx-additional-options
+++ option_value=
+++ '[' -z '' ']'
+++ option_value='--color pointer:9,spinner:92,marker:46'
+++ echo '--color pointer:9,spinner:92,marker:46'
++ additional_fzf_options='--color pointer:9,spinner:92,marker:46'
+++ tmux_option_or_fallback @sessionx-bind-back ctrl-b
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-back
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-b
+++ echo ctrl-b
++ bind_back=ctrl-b
+++ tmux_option_or_fallback @sessionx-bind-new-window ctrl-e
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-new-window
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-e
+++ echo ctrl-e
++ bind_new_window=ctrl-e
+++ tmux_option_or_fallback @sessionx-bind-zo-new-window ctrl-f
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-zo-new-window
+++ option_value=ctrl-y
+++ '[' -z ctrl-y ']'
+++ echo ctrl-y
++ bind_zo=ctrl-y
+++ tmux_option_or_fallback @sessionx-bind-kill-session alt-bspace
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-kill-session
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=alt-bspace
+++ echo alt-bspace
++ bind_kill_session=alt-bspace
+++ tmux_option_or_fallback @sessionx-bind-abort esc
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-abort
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=esc
+++ echo esc
++ bind_exit=esc
+++ tmux_option_or_fallback @sessionx-bind-accept enter
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-accept
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=enter
+++ echo enter
++ bind_accept=enter
+++ tmux_option_or_fallback @sessionx-bind-delete-char bspace
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-delete-char
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=bspace
+++ echo bspace
++ bind_delete_char=bspace
+++ tmux_option_or_fallback @sessionx-bind-scroll-up ctrl-u
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-scroll-up
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-u
+++ echo ctrl-u
++ bind_scroll_up=ctrl-u
+++ tmux_option_or_fallback @sessionx-bind-scroll-down ctrl-d
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-scroll-down
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-d
+++ echo ctrl-d
++ bind_scroll_down=ctrl-d
+++ tmux_option_or_fallback @sessionx-bind-select-up ctrl-n
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-select-up
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-n
+++ echo ctrl-n
++ bind_select_up=ctrl-n
+++ tmux_option_or_fallback @sessionx-bind-select-down ctrl-p
+++ local option_value
++++ tmux show-option -gqv @sessionx-bind-select-down
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ctrl-p
+++ echo ctrl-p
++ bind_select_down=ctrl-p
++ handle_args
+++ tmux_option_or_fallback @sessionx-ls-command ls
+++ local option_value
++++ tmux show-option -gqv @sessionx-ls-command
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=ls
+++ echo ls
++ LS_COMMAND=ls
+++ input
++++ tmux_option_or_fallback @sessionx-window-mode off
++++ local option_value
+++++ tmux show-option -gqv @sessionx-window-mode
++++ option_value=
++++ '[' -z '' ']'
++++ option_value=off
++++ echo off
+++ default_window_mode=off
+++ [[ off == \o\n ]]
++++ tmux_option_or_fallback @sessionx-filter-current true
++++ local option_value
+++++ tmux show-option -gqv @sessionx-filter-current
++++ option_value=false
++++ '[' -z false ']'
++++ echo false
+++ filter_current_session=false
+++ [[ false == \t\r\u\e ]]
+++ get_sorted_sessions
++++ tmux display-message -p '#{client_last_session}'
+++ last_session=backups
++++ tmux list-sessions
++++ sed -E 's/:.*$//'
++++ grep -v '^backups$'
+++ sessions=0
++++ tmux_option_or_fallback @sessionx-filtered-sessions ''
++++ local option_value
+++++ tmux show-option -gqv @sessionx-filtered-sessions
++++ option_value=
++++ '[' -z '' ']'
++++ option_value=
++++ echo ''
+++ filtered_sessios=
+++ [[ -n '' ]]
+++ echo -e '0\nbackups'
+++ awk '!seen[$0]++'
++ INPUT='0
+backups'
+++ additional_input
++++ get_sorted_sessions
+++++ tmux display-message -p '#{client_last_session}'
++++ last_session=backups
+++++ tmux list-sessions
+++++ sed -E 's/:.*$//'
+++++ grep -v '^backups$'
++++ sessions=0
+++++ tmux_option_or_fallback @sessionx-filtered-sessions ''
+++++ local option_value
++++++ tmux show-option -gqv @sessionx-filtered-sessions
+++++ option_value=
+++++ '[' -z '' ']'
+++++ option_value=
+++++ echo ''
++++ filtered_sessios=
++++ [[ -n '' ]]
++++ echo -e '0\nbackups'
++++ awk '!seen[$0]++'
+++ sessions='0
+backups'
++++ tmux_option_or_fallback @sessionx-custom-paths ''
++++ local option_value
+++++ tmux show-option -gqv @sessionx-custom-paths
++++ option_value=/Users/omerxx/dotfiles
++++ '[' -z /Users/omerxx/dotfiles ']'
++++ echo /Users/omerxx/dotfiles
+++ custom_paths=/Users/omerxx/dotfiles
++++ tmux_option_or_fallback @sessionx-custom-paths-subdirectories false
++++ local option_value
+++++ tmux show-option -gqv @sessionx-custom-paths-subdirectories
++++ option_value=false
++++ '[' -z false ']'
++++ echo false
+++ custom_path_subdirectories=false
+++ [[ -z /Users/omerxx/dotfiles ]]
++++ echo /Users/omerxx/dotfiles
++++ sed -E 's/ *, */,/g'
++++ sed -E 's/^ *//'
++++ sed -E 's/ *$//'
++++ sed -E 's/ /â/g'
+++ clean_paths=/Users/omerxx/dotfiles
+++ [[ false == \t\r\u\e ]]
+++ paths=/Users/omerxx/dotfiles
+++ export -f add_path
+++ printf '%s\n' /Users/omerxx/dotfiles
+++ xargs -n 1 -P 0 bash -c 'add_path "$@"' _
++ ADDITIONAL_INPUT=/Users/omerxx/dotfiles
++ [[ -n /Users/omerxx/dotfiles ]]
+++ additional_input
++++ get_sorted_sessions
+++++ tmux display-message -p '#{client_last_session}'
++++ last_session=backups
+++++ sed -E 's/:.*$//'
+++++ tmux list-sessions
+++++ grep -v '^backups$'
++++ sessions=0
+++++ tmux_option_or_fallback @sessionx-filtered-sessions ''
+++++ local option_value
++++++ tmux show-option -gqv @sessionx-filtered-sessions
+++++ option_value=
+++++ '[' -z '' ']'
+++++ option_value=
+++++ echo ''
++++ filtered_sessios=
++++ [[ -n '' ]]
++++ echo -e '0\nbackups'
++++ awk '!seen[$0]++'
+++ sessions='0
+backups'
++++ tmux_option_or_fallback @sessionx-custom-paths ''
++++ local option_value
+++++ tmux show-option -gqv @sessionx-custom-paths
++++ option_value=/Users/omerxx/dotfiles
++++ '[' -z /Users/omerxx/dotfiles ']'
++++ echo /Users/omerxx/dotfiles
+++ custom_paths=/Users/omerxx/dotfiles
++++ tmux_option_or_fallback @sessionx-custom-paths-subdirectories false
++++ local option_value
+++++ tmux show-option -gqv @sessionx-custom-paths-subdirectories
++++ option_value=false
++++ '[' -z false ']'
++++ echo false
+++ custom_path_subdirectories=false
+++ [[ -z /Users/omerxx/dotfiles ]]
++++ echo /Users/omerxx/dotfiles
++++ sed -E 's/ *, */,/g'
++++ sed -E 's/^ *//'
++++ sed -E 's/ *$//'
++++ sed -E 's/ /â/g'
+++ clean_paths=/Users/omerxx/dotfiles
+++ [[ false == \t\r\u\e ]]
+++ paths=/Users/omerxx/dotfiles
+++ export -f add_path
+++ printf '%s\n' /Users/omerxx/dotfiles
+++ xargs -n 1 -P 0 bash -c 'add_path "$@"' _
++ INPUT='/Users/omerxx/dotfiles\n0
+backups'
++ [[ true == \t\r\u\e ]]
++ PREVIEW_LINE='/tmux-sessionx/scripts/preview.sh  {}'
+++ tmux_option_or_fallback @sessionx-zoxide-mode off
+++ local option_value
++++ tmux show-option -gqv @sessionx-zoxide-mode
+++ option_value=on
+++ '[' -z on ']'
+++ echo on
++ Z_MODE=on
+++ tmux_option_or_fallback @sessionx-x-path /Users/pkunwar/.config
+++ local option_value
++++ tmux show-option -gqv @sessionx-x-path
+++ option_value='~/dotfiles'
+++ '[' -z '~/dotfiles' ']'
+++ echo '~/dotfiles'
++ CONFIGURATION_PATH='~/dotfiles'
+++ tmux_option_or_fallback @sessionx-fzf-builtin-tmux off
+++ local option_value
++++ tmux show-option -gqv @sessionx-fzf-builtin-tmux
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=off
+++ echo off
++ FZF_BUILTIN_TMUX=off
++ TREE_MODE='ctrl-t:change-preview(/tmux-sessionx/scripts/preview.sh -t {1})'
++ CONFIGURATION_MODE='ctrl-x:reload(find ~/dotfiles -mindepth 1 -maxdepth 1 -type d -o -type l)+change-preview(ls {})'
++ WINDOWS_MODE='ctrl-w:reload(tmux list-windows -a -F '\''#{session_name}:#{window_name}'\'')+change-preview(/tmux-sessionx/scripts/preview.sh -w {1})'
++ NEW_WINDOW='ctrl-e:reload(find /Users/pkunwar/.config/tmux/plugins/tmux-sessionx -mindepth 1 -maxdepth 1 -type d -o -type l)+change-preview(ls {})'
++ ZO_WINDOW='ctrl-y:reload(zoxide query -l)+change-preview(ls {})'
++ BACK='ctrl-b:reload(echo -e "/Users/omerxx/dotfiles\n0
+backups")+change-preview(/tmux-sessionx/scripts/preview.sh {1})'
++ KILL_SESSION='alt-bspace:execute-silent(tmux kill-session -t {})+reload(/tmux-sessionx/scripts/reload_sessions.sh)'
++ ACCEPT=enter:replace-query+print-query
++ DELETE=bspace:backward-delete-char
++ EXIT=esc:abort
++ SELECT_UP=ctrl-n:up
++ SELECT_DOWN=ctrl-p:down
++ SCROLL_UP=ctrl-u:preview-half-page-up
++ SCROLL_DOWN=ctrl-d:preview-half-page-down
++ RENAME_SESSION_EXEC='bash -c '\'' printf >&2 "New name: ";read name; tmux rename-session -t {1} "${name}"; '\'''
++ RENAME_SESSION_RELOAD='bash -c '\'' tmux list-sessions | sed -E "s/:.*$//"; '\'''
++ RENAME_SESSION='ctrl-r:execute(bash -c '\'' printf >&2 "New name: ";read name; tmux rename-session -t {1} "${name}"; '\'')+reload(bash -c '\'' tmux list-sessions | sed -E "s/:.*$//"; '\'')'
++ HEADER='enter=ó°¿ î½ alt-bspace=ó±§ î½ ctrl-r=ó° î½ ctrl-x=ó± î½ ctrl-w=ï  î½ ctrl-e=ó° î½ ctrl-b=ó° î½ ctrl-t=ó°  î½ ctrl-u=ï¹ î½ ctrl-d=ïº / ctrl-y=ï'
++ is_fzf-marks_enabled
++ local fzf_marks_mode fzf_marks_file
+++ get_fzf-marks_file
++++ tmux_option_or_fallback @sessionx-fzf-marks-file /Users/pkunwar/.fzf-marks
++++ local option_value
++++ sed 's|~|/Users/pkunwar|'
+++++ tmux show-option -gqv @sessionx-fzf-marks-file
++++ option_value=
++++ '[' -z '' ']'
++++ option_value=/Users/pkunwar/.fzf-marks
++++ echo /Users/pkunwar/.fzf-marks
+++ echo /Users/pkunwar/.fzf-marks
++ fzf_marks_file=/Users/pkunwar/.fzf-marks
++ [[ -e /Users/pkunwar/.fzf-marks ]]
++ [[ '' != \o\n ]]
++ return 1
++ [[ off == \o\n ]]
++ fzf_size_arg=-p
++ args=(--bind "$TREE_MODE" --bind "$CONFIGURATION_MODE" --bind "$WINDOWS_MODE" --bind "$NEW_WINDOW" --bind "$ZO_WINDOW" --bind "$BACK" --bind "$KILL_SESSION" --bind "$DELETE" --bind "$EXIT" --bind "$SELECT_UP" --bind "$SELECT_DOWN" --bind "$ACCEPT" --bind "$SCROLL_UP" --bind "$SCROLL_DOWN" --bind "$RENAME_SESSION" --bind '?:toggle-preview' --bind 'change:first' --exit-0 --header="$HEADER" --preview="${PREVIEW_LINE}" --preview-window="${preview_location},${preview_ratio},," --layout="$layout_mode" --pointer="$pointer_icon" "${fzf_size_arg}" "$window_width,$window_height" --prompt "$prompt_icon" --print-query --tac --scrollbar 'ââ')
+++ tmux_option_or_fallback @sessionx-legacy-fzf-support off
+++ local option_value
++++ tmux show-option -gqv @sessionx-legacy-fzf-support
+++ option_value=
+++ '[' -z '' ']'
+++ option_value=off
+++ echo off
++ legacy=off
++ [[ off == \o\f\f ]]
++ args+=(--border-label "Current session: \"$CURRENT\" ")
++ args+=(--bind 'focus:transform-preview-label:echo [ {} ]')
+++ tmux_option_or_fallback @sessionx-auto-accept off
+++ local option_value
++++ tmux show-option -gqv @sessionx-auto-accept
+++ option_value=off
+++ '[' -z off ']'
+++ echo off
++ auto_accept=off
++ [[ off == \o\n ]]
+++ is_tmuxinator_enabled
++++ tmux_option_or_fallback @sessionx-tmuxinator-mode off
++++ local option_value
+++++ tmux show-option -gqv @sessionx-tmuxinator-mode
++++ option_value=
++++ '[' -z '' ']'
++++ option_value=off
++++ echo off
+++ local tmuxinator_mode=off
+++ [[ off != \o\n ]]
+++ return 1
+++ is_fzf-marks_enabled
+++ local fzf_marks_mode fzf_marks_file
++++ get_fzf-marks_file
+++++ tmux_option_or_fallback @sessionx-fzf-marks-file /Users/pkunwar/.fzf-marks
+++++ local option_value
+++++ sed 's|~|/Users/pkunwar|'
++++++ tmux show-option -gqv @sessionx-fzf-marks-file
+++++ option_value=
+++++ '[' -z '' ']'
+++++ option_value=/Users/pkunwar/.fzf-marks
+++++ echo /Users/pkunwar/.fzf-marks
++++ echo /Users/pkunwar/.fzf-marks
+++ fzf_marks_file=/Users/pkunwar/.fzf-marks
+++ [[ -e /Users/pkunwar/.fzf-marks ]]
+++ [[ '' != \o\n ]]
+++ return 1
++ eval 'fzf_opts=(--color pointer:9,spinner:92,marker:46)'
+++ fzf_opts=(--color pointer:9,spinner:92,marker:46)
++ [[ off == \o\n ]]
+++ echo -e '/Users/omerxx/dotfiles\n0
+backups'
+++ sed -E 's/â/ /g'
+++ tail -n1
+++ fzf-tmux --color pointer:9,spinner:92,marker:46 --bind 'ctrl-t:change-preview(/tmux-sessionx/scripts/preview.sh -t {1})' --bind 'ctrl-x:reload(find ~/dotfiles -mindepth 1 -maxdepth 1 -type d -o -type l)+change-preview(ls {})' --bind 'ctrl-w:reload(tmux list-windows -a -F '\''#{session_name}:#{window_name}'\'')+change-preview(/tmux-sessionx/scripts/preview.sh -w {1})' --bind 'ctrl-e:reload(find /Users/pkunwar/.config/tmux/plugins/tmux-sessionx -mindepth 1 -maxdepth 1 -type d -o -type l)+change-preview(ls {})' --bind 'ctrl-y:reload(zoxide query -l)+change-preview(ls {})' --bind 'ctrl-b:reload(echo -e "/Users/omerxx/dotfiles\n0
+backups")+change-preview(/tmux-sessionx/scripts/preview.sh {1})' --bind 'alt-bspace:execute-silent(tmux kill-session -t {})+reload(/tmux-sessionx/scripts/reload_sessions.sh)' --bind bspace:backward-delete-char --bind esc:abort --bind ctrl-n:up --bind ctrl-p:down --bind enter:replace-query+print-query --bind ctrl-u:preview-half-page-up --bind ctrl-d:preview-half-page-down --bind 'ctrl-r:execute(bash -c '\'' printf >&2 "New name: ";read name; tmux rename-session -t {1} "${name}"; '\'')+reload(bash -c '\'' tmux list-sessions | sed -E "s/:.*$//"; '\'')' --bind '?:toggle-preview' --bind change:first --exit-0 '--header=enter=ó°¿ î½ alt-bspace=ó±§ î½ ctrl-r=ó° î½ ctrl-x=ó± î½ ctrl-w=ï  î½ ctrl-e=ó° î½ ctrl-b=ó° î½ ctrl-t=ó°  î½ ctrl-u=ï¹ î½ ctrl-d=ïº / ctrl-y=ï' '--preview=/tmux-sessionx/scripts/preview.sh  {}' --preview-window=top,75%,, --layout=default $'--pointer=â\226¶' -p 75%,85% --prompt 'î¯ ' --print-query --tac --scrollbar $'â\226\214â\226\220' --border-label 'Current session: "0" ' --bind 'focus:transform-preview-label:echo [ {} ]'
++ RESULT=
++ handle_output ''
++ '[' -d '' ']'
++ is_fzf-marks_mark ''
+++ echo ''
+++ grep -q ' : '
++ return 1
++ echo ''
++ grep :
+++ echo ''
+++ tr -d '\n'
++ target=
++ [[ -z '' ]]
++ exit 0
